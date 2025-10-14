@@ -11,7 +11,7 @@ public class alumnos {
 
     @Override
     public String toString() {
-        return "alumnos{" + "nombre=" + nombre + ", legajo=" + legajo + '}';
+        return " alumno -- " + "\nnombre: " + nombre + "\nlegajo: " + legajo;
     }
 
     public String getNombre() {
