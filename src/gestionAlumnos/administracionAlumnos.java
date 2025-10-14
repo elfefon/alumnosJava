@@ -17,16 +17,15 @@ public class administracionAlumnos {
     }
     
     public boolean eliminarAlumnoPorLegajo(int legajo) { 
-        // Uso un Iterator, que es la forma correcta de eliminar durante la iteración
         Iterator<alumnos> it = listaAlumnos.iterator();
         while (it.hasNext()) {
             alumnos a = it.next();
-            if (a.getLegajo() == legajo) { // Asumiendo que alumnos tiene un getLegajo()
+            if (a.getLegajo() == legajo) { 
                 it.remove();
-                return true; // Se eliminó con éxito1
+                return true;
             }
         }
-        return false; // No se encontró
+        return false; 
     }
     
     public void mostrarListaAlmunos(){
@@ -34,7 +33,6 @@ public class administracionAlumnos {
             System.out.println("No hay alumnos registrados");
             return;
         }
-        
         System.out.println("\n --- Lista alumnos ( cantidad: " + listaAlumnos.size() + ") ---");
         for (alumnos alumno : listaAlumnos){
             System.out.println(alumno);
